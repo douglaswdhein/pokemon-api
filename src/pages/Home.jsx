@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import Navbar from "../components/Navbar";
 import PokemonCard from '../components/PokemonCard';
+import PokemonSearch from '../components/PokemonSearch';
 import { Container, Grid, Box } from '@mui/material';
 
 export const Home = ({setPokemonData}) => {
@@ -45,8 +46,9 @@ export const Home = ({setPokemonData}) => {
     return (
         <div>
             <Navbar searchPokemon={searchPokemon}></Navbar>
+            <PokemonSearch searchPokemon={searchPokemon}></PokemonSearch>
             <Container maxWidth="false">
-                <Grid container spacing={3}>
+                <Grid container spacing={4}>
                     {pokemons.map((pokemon) => (
                         <Grid item xs={12} sm={6} md={6} lg={3}>
                             <Box onClick={() => pokemonPickHandler(pokemon.data)}>
