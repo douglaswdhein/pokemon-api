@@ -7,7 +7,7 @@ The application is currently partial and still under development for layout and 
  - React
  - Material UI
 
-## ♻️ How to run the application
+## How to run the application
 
 ```bash
   # Clone the project
