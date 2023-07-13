@@ -11,7 +11,7 @@ export default function Navbar() {
             <AppBar position="static" sx={{ backgroundColor: '#D9D9D9', height: '100px' }}>
                 <Toolbar>
                     <Box display="flex" justifyContent="center" width="100%">
-                        <Box component="img" src="/assets/logotipo.png" height="5em" marginTop="5px" sx={{cursor: "pointer"}} onClick={() => navigate("/")}/>
+                        <Box component="img" src="/assets/logotipo.png" height="5em" marginTop="7px" sx={{cursor: "pointer"}} onClick={() => navigate("/")}/>
                     </Box>
                 </Toolbar>
             </AppBar>

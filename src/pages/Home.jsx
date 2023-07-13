@@ -14,7 +14,7 @@ export const Home = ({setPokemonData}) => {
 
     const getPokemon = () => {
         var endpoints = []
-        for (var i = 1; i < 50; i++) {
+        for (var i = 1; i < 17; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}`)
         }
 
@@ -47,7 +47,7 @@ export const Home = ({setPokemonData}) => {
         <div>
             <Navbar searchPokemon={searchPokemon}></Navbar>
             <PokemonSearch searchPokemon={searchPokemon}></PokemonSearch>
-            <Container maxWidth="false">
+            <Container maxWidth="false" sx={{ marginTop: "30px", marginBottom: "30px" }}>
                 <Grid container spacing={4}>
                     {pokemons.map((pokemon) => (
                         <Grid item xs={12} sm={6} md={6} lg={3}>
