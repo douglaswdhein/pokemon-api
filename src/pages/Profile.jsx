@@ -27,7 +27,8 @@ export const Profile = ({ pokemonData }) => {
     const boxStyle = {      
         textAlign: 'center', 
         marginTop: '50px', 
-        marginBottom: '50px'     
+        marginBottom: '50px',
+        textTransform: 'uppercase'  
     };
 
     return (
