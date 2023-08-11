@@ -8,10 +8,10 @@ export default function Navbar() {
     const navigate = useNavigate ()
     return (
         <Box sx={{ flexGrow: 1, marginBottom: "2em" }}>
-            <AppBar position="static" sx={{ backgroundColor: '#D9D9D9', height: '100px' }}>
+            <AppBar position="static" sx={{ backgroundColor: '#ededed', height: '90px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Toolbar>
                     <Box display="flex" justifyContent="center" width="100%">
-                        <Box component="img" src="/assets/logotipo.png" height="5em" marginTop="7px" sx={{cursor: "pointer"}} onClick={() => navigate("/")}/>
+                        <Box component="img" src="/assets/logotipo.png" height="4em"  sx={{cursor: "pointer"}} onClick={() => navigate("/")}/>
                     </Box>
                 </Toolbar>
             </AppBar>

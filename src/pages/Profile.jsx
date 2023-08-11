@@ -19,6 +19,17 @@ export const Profile = ({ pokemonData }) => {
         return null;
     }
 
+    const dividerStyle = {      
+        textTransform: 'uppercase', 
+        color: '#8C8C8C',         
+    };
+
+    const boxStyle = {      
+        textAlign: 'center', 
+        marginTop: '50px', 
+        marginBottom: '50px'     
+    };
+
     return (
         <>
             <Navbar hideSearch />
@@ -26,7 +37,7 @@ export const Profile = ({ pokemonData }) => {
                 <Paper elevation={3}>
                     <Box display="flex" flexDirection="column" alignItems="center" padding={3}>
                         <Typography fontSize={35} textTransform="uppercase" color="#8C8C8C">{name}</Typography>
-                        <Box display="flex" justifyContent="space-around" alignItems="center" width="100%" m={3} marginBottom="15px" sx={{
+                        <Box display="flex" justifyContent="space-around" alignItems="center" width="100%" m={3} marginTop="50px" marginBottom="50px" sx={{
                             flexDirection: {
                                 xs: "column",
                                 md: "row",
@@ -36,13 +47,13 @@ export const Profile = ({ pokemonData }) => {
                             <PokemonInfo pokemonData={pokemonData} />
                         </Box>
                         <Box width="100%">
-                            <Divider>Abilities</Divider>
-                            <Box textAlign="center" marginTop="30px" marginBottom="30px">
+                            <Divider style={dividerStyle}>Abilities</Divider>
+                            <Box style={boxStyle}>
                                 {moves.map((moveData, key) => (
-                                    <Chip key={key} sx={{ m: "5px" }} label={moveData.move.name} />
+                                    <Chip key={key} sx={{ m: "5px", color: "#8C8C8C" }} label={moveData.move.name} />
                                 ))}
                             </Box>
-                            <Divider>Evolutions</Divider>
+                            <Divider style={dividerStyle}>Evolutions</Divider>
                             <Box display="flex" justifyContent="space-between" marginTop="30px">
                                 <Box component="img" src={sprites.front_female} width="25%" height="25%" />
                                 <Box component="img" src={sprites.front_shiny} width="25%" height="25%" />

@@ -9,21 +9,33 @@ import { typeHandler } from '../../utils';
 
 export default function PokemonInfo({ pokemonData }) {
     const { height, weight, types } = pokemonData;
+
+    const cellStyleTittle = {      
+        textTransform: 'uppercase', 
+        color: '#8C8C8C',         
+    };
+
+    const cellStyle = {
+        textAlign: 'center',      
+        textTransform: 'uppercase', 
+        color: '#8C8C8C',         
+    };
+
     return (
         <TableContainer component={Paper} sx={{ height: "fit-content", maxWidth: "250px" }}>
             <Table aria-label="a dense table"> 
                 <TableBody>
                     <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                        <TableCell>{"Type"}</TableCell>
-                        <TableCell>{typeHandler(types)}</TableCell>
+                        <TableCell style={cellStyleTittle}>{"Type"}</TableCell>
+                        <TableCell style={cellStyle}>{typeHandler(types)}</TableCell>
                     </TableRow>
                     <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                        <TableCell>{"Height"}</TableCell>
-                        <TableCell>{height}cm</TableCell>
+                        <TableCell style={cellStyleTittle}>{"Height"}</TableCell>
+                        <TableCell style={cellStyle}>{height}CM</TableCell>
                     </TableRow>
                     <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                        <TableCell>{"Weight"}</TableCell>
-                        <TableCell>{weight}g</TableCell>
+                        <TableCell style={cellStyleTittle}>{"Weight"}</TableCell>
+                        <TableCell style={cellStyle}>{weight}G</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
