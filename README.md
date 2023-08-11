@@ -1,8 +1,6 @@
 ## About
 An application using the RESTful Pokémon API where you can search for the various types of existing Pokémon, as well as their evolutions, abilities, weight, height, and images for each one. 
 
-The application is currently partial and still under development for layout and functionality improvements.
-
 ## Tools
  - React
  - Material UI
